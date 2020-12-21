@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Bot: MonoBehaviour
+public class Bot: Entity
 {
 
     // Start is called before the first frame update
@@ -17,7 +17,6 @@ public class Bot: MonoBehaviour
    Inventory inventory;
    public GameObject projectile, gunSlot;
    Transform playerPos;
-   public string name;
 
    void Start() {
       inventory = GetComponent<Inventory>();

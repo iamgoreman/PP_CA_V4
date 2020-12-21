@@ -27,7 +27,7 @@ public class PlayerScoreboard : MonoBehaviour
            entryRect.anchoredPosition = new Vector2(0,i*-height);
            playerEntry.gameObject.SetActive(true);
 
-            playerEntry.Find("playername").GetComponent<Text>().text = string.Concat(entityList[i].name);
+            playerEntry.Find("playername").GetComponent<Text>().text = string.Concat(entityList[i].GetComponent<Entity>().name);
 
             int kill = Random.Range(0,5);
             int death = Random.Range(0,10);

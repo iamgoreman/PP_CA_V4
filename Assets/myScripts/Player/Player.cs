@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class Player : Entity
 {
     // Start is called before the first frame update
     public int ID;
@@ -14,12 +14,12 @@ public class Player : MonoBehaviour
     bool dead;
     public Camera deathCam, mainCam;
     float deathTimer = 3f;
-    public string name = "Meavaris";
 
     void Start() {
         inventory = GetComponent<Inventory>();
         PopulateSpawnPoints();
         SpawnPlayer();
+        name = "Mavaris";
     }
 
     void Update() {
